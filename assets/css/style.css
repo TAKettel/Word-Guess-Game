@@ -1,0 +1,20 @@
+.mx-auto {
+    width: 80%;
+    text-align: center;
+}
+
+.rules {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.col-lg {
+    text-align: center;
+}
+
+.card {
+    height: 80px;
+    background: teal;
+    color: white;
+}

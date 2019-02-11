@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <title>Dinosaur Deep Cuts</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Choose a theme for your game! -->
+    <!-- Use key events to listen for the letters that your players will type. -->
+    <!-- Display the following on the page: -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto rules">Press any key to get started!
+        </div>
+      </div>
+    </div>
+    
+    <div class="jumbotron container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+          <div class="col-lg-8 mx-auto">
+            <h2 id="puzzleSpace"></h2>
+          </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+
+    <!-- If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _. -->
+    <!-- As the user guesses the correct letters, reveal them: m a d o _  _ a. -->  
+    
+    <div class="container">
+      <div class="row">
+    <div class="col-lg">
+      <div class="card">Number of Guesses Remaining: <div id="guessesLeft"><!-- (# of guesses remaining for the user). --></div></div>
+      </div> 
+    <div class="col-lg">
+      <div class="card">Letters Already Guessed: <div id="wrongGuesses"><!--(Letters the user has guessed, displayed like L Z Y H).--></div></div>
+      </div>  
+    <div class="col-lg">
+      <div class="card">Wins: <div id="score"><!--(# of times user guessed the word correctly). --></div></div>
+      </div>
+      </div>
+    </div>
+
+    <!-- After the user wins/loses the game should automatically choose another word and make the user play it.-->
+  <script src="assets/javascript/game.js"></script>
+</body>
+<!-- Things that I haven't figured out just yet:
+  Making sure capitalization doesn't matter.
+  Allowing spaces in the puzzle phrases.
+  Making sure only letters are accepted as inputs.
+  CSS styling. Done a bit, but not the focus, and could still be MUCH better.
+  *Not allowing repeated letters to keep tracking down the correct answers.*
+  -->
+</html>
