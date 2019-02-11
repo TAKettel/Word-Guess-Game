@@ -100,7 +100,7 @@ var startGame = function() {
 
 // INSIDE THE KEYUP EVENT WATCHER.
 // IF puzzle completed, congratulate, add to wins, and start new game.
-if (numberOfLetters === 0) {
+if (numberOfLetters <= 0) {
     startingScore++;
     alert("Congratulations! The word was " + puzzlePick + "!");
     scoreText.innerHTML = startingScore;
@@ -111,7 +111,7 @@ if (numberOfLetters === 0) {
     startGame()
 }
 // IF guessesLeft = 0, console and start new game.
-if (startingGuesses === 0) {
+if (startingGuesses <= 0) {
     alert("Better luck next time!");
     startingGuesses = 12;
     console.log(startingGuesses)
