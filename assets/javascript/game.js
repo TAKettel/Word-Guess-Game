@@ -49,6 +49,14 @@ var startGame = function() {
         var guess = event.key;
         console.log(guess)
     // assign the keypress, make it all lower case.
+
+    // Trying to make it so that an already guessed response cannot be used twice. Still not working, oh well.
+    for (var k = 0; k < userGuesses.length; k++) {
+        if (userGuesses[k] === guess) {
+        return;
+        };
+    };
+
     // go through and compare ()
         for (var j = 0; j < puzzlePick.length; j++) {
             if (puzzlePick[j] === guess) {
@@ -71,11 +79,6 @@ var startGame = function() {
             if (wrong === 0) {
     // Drop guesses by one - make sure this isn't inside the For Loop.
 
-    // Trying to make it so that an already guessed response cannot be used twice.
-//            for (var k = 0; k < userGuesses; k++) {
-//                if (userGuesses[k] === guess) {
-//                break;
-//                };
        
     //This isn't working all that well, need to learn more about breaking loops and if/else statements.
     // Skip it, ask about it later, etc etc.
