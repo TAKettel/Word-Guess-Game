@@ -1,7 +1,24 @@
 // Need an array of possible words/phrases, and other initial variables.
-var puzzles = ["allosaurus", "ankylosaurus", "compsognathus", "ceratosaurus",
-    "dilophosaurus", "gallimimus", "iguanadon", "pachycephalosaurus",
-    "protoceratops", "spinosaurus", "styracosaurus", "velociraptor"];
+var puzzles = ["allosaurus",
+    "ankylosaurus",
+    "archaeopteryx",
+    "baryonyx",
+    "compsognathus",
+    "carnotaurus",
+    "deinonychus",
+    "dilophosaurus",
+    "diplodocus",
+    "gallimimus",
+    "hypsilophodon",
+    "iguanadon",
+    "lambeosaurus",
+    "pachycephalosaurus",
+    "parasaurolophus",
+    "protoceratops",
+    "spinosaurus",
+    "struthiomimus",
+    "styracosaurus",
+    "velociraptor"];
 // var alphabet =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var startingGuesses = 12;
 var startingScore = 0;
@@ -21,6 +38,10 @@ var gamePuzzle = document.getElementById("puzzleSpace");
 leftText.innerHTML = startingGuesses;
 scoreText.innerHTML = startingScore;
 wrongText.innerHTML = userGuesses;
+
+//Check if one index of an array has been called that the next puzzle would not have the same index.
+// if count === count, count++.  Figure out how to set up count.
+
 
 // Pick one of however many phrases to be the puzzle.
 var startGame = function() {
@@ -85,8 +106,8 @@ var startGame = function() {
 
                 startingGuesses--;
                 leftText.innerHTML = startingGuesses;
-//            };
-        }
+
+            }
             else {
     // Reduce the number of remaining letters to reveal.
                 numberOfLetters = numberOfLetters - wrong;
